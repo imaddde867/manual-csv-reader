@@ -1,6 +1,7 @@
 # CSV Data Generator and Parser
-![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0es4-dIqBL81-vHoAMFBr9l8Ru3ewHNzE1A&s)
-
+<p align="center">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0es4-dIqBL81-vHoAMFBr9l8Ru3ewHNzE1A&s" alt="Centered Image">
+</p>
 A simple Python script that demonstrates how to generate random user data and parse CSV files without using external data manipulation libraries. This project serves as a learning exercise for manual CSV file handling in Python.
 
 ## Features
