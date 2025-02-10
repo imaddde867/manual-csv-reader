@@ -1,5 +1,4 @@
 # Import required libraries
-import csv
 import datetime 
 import random
 
@@ -49,20 +48,36 @@ for _ in range(number_of_rows):
 
 # Write data to CSV file
 with open("randomly_generated_data.csv", "w", newline='\n') as file:
-    writer = csv.writer(file)
-    writer.writerow(header)    # Write header row
-    writer.writerows(lines)    # Write data rows
+    # Write header row (join with commas)
+    file.write(','.join(str(field) for field in header) + '\n')
+    # Write data rows (join each row with commas)
+    for line in lines:
+        file.write(','.join(str(field) for field in line) + '\n')
 
-# Read CSV file and convert to list of dictionaries
-with open('randomly_generated_data.csv', 'r') as file:
-    # Read and parse header row
-    headers = file.readline().strip().split(',')
+
+def read_csv_without_library(file_path):
+    # Open the CSV file for reading
+    with open(file_path, 'r') as file:
+        # Read all lines from the file
+        lines = file.readlines()
+
+    # Assume the first line is the header
+    header = lines[0].strip().split(',')
+    
+    # Process the remaining lines into data rows
     data = []
-    # Process each line and create dictionary with header keys
-    for line in file:
-        values = line.strip().split(',')
-        row_dict = dict(zip(headers, values)) 
-        data.append(row_dict)
+    for line in lines[1:]:
+        # Skip empty lines
+        if line.strip():
+            # Remove extra whitespace and split the line by comma
+            row = line.strip().split(',')
+            data.append(row)
+    
+    return header, data
 
-# Print first row as a sample of the generated data
-print(data[0]) 
+# Example :
+header, data = read_csv_without_library("randomly_generated_data.csv")
+print("Header:", header)
+print("Data:")
+for row in data:
+    print(row)
