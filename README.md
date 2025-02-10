@@ -1,6 +1,6 @@
 # CSV Data Generator and Parser
 
-[![CSV](https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ACSV_Logo.svg&psig=AOvVaw02GfKq2nz_xmRdWne2-Hko&ust=1739298810791000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJC6ubDfuYsDFQAAAAAdAAAAABAE)
+![CSV](https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ACSV_Logo.svg&psig=AOvVaw02GfKq2nz_xmRdWne2-Hko&ust=1739298810791000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJC6ubDfuYsDFQAAAAAdAAAAABAE)
 
 A simple Python script that demonstrates how to generate random user data and parse CSV files without using external data manipulation libraries. This project serves as a learning exercise for manual CSV file handling in Python.
 
